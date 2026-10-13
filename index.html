@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase | Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span> ShopEase</a>
+    <nav><a href="#products">Products</a><a href="#cart">Your Cart <span id="cart-count" class="count">0</span></a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SIMPLE · SMART · SECURE</p>
+        <h1>Find your next<br><span>favorite thing.</span></h1>
+        <p class="hero-copy">Browse products, build your cart, and place a demo order in just a few clicks.</p>
+        <a class="primary-link" href="#products">Explore products <span>↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="bag">S</div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="art-caption">GOOD FINDS<br>START HERE.</div>
+      </div>
+    </section>
+    <section id="products" class="section">
+      <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Popular picks</h2></div><p class="muted">Choose something you love.</p></div>
+      <div id="product-grid" class="product-grid"><p class="status">Loading products…</p></div>
+    </section>
+    <section id="cart" class="section cart-section">
+      <div class="section-heading"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Your shopping cart</h2></div><button id="clear-cart" class="text-button">Clear cart</button></div>
+      <div class="cart-layout">
+        <div id="cart-items" class="cart-items"><p class="empty">Your cart is waiting for its first find.</p></div>
+        <aside class="summary">
+          <h3>Order summary</h3>
+          <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div>
+          <div class="summary-row"><span>Delivery</span><strong id="delivery">Free</strong></div>
+          <div class="summary-row total"><span>Total</span><strong id="total">₹0.00</strong></div>
+          <p class="summary-note">Demo checkout · No payment is collected.</p>
+          <form id="checkout-form">
+            <label for="customer-name">Full name</label><input id="customer-name" name="name" required minlength="2" placeholder="Your name" />
+            <label for="customer-email">Email address</label><input id="customer-email" name="email" type="email" required placeholder="you@example.com" />
+            <label for="customer-address">Delivery address</label><textarea id="customer-address" name="address" required minlength="8" rows="3" placeholder="Enter delivery address"></textarea>
+            <button class="checkout-button" type="submit">Place demo order <span>→</span></button>
+          </form>
+          <p id="notice" class="notice" role="status"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">S</span> ShopEase</a><p>Student web development demo · Front end + back end</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
